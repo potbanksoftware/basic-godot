@@ -1,0 +1,49 @@
+# Godot 4+ specific ignores
+.godot/
+/android/
+
+.vscode/
+
+# Addons
+addons/*
+!addons/debug_menu
+!addons/godot-helpers
+!addons/godot-menus
+!addons/AutoExportVersion
+
+# Exports
+*.exe
+*.x86_64
+*.apk
+*.apk.idsig
+*.bin
+*.pck
+
+# Krita backups
+*.png~
+*.kra~
+*-autosave.kra
+
+# Blender backups
+*.blend1
+
+# Zip archives of assets e.g. Kenney
+*.zip
+*.7z
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
+*.egg
+.tox/
+.coverage
+.coverage.*
+.pytest_cache/
+venv/
+.mypy_cache/
+
+# Web export
+web/

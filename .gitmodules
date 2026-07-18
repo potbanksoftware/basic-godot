@@ -1,0 +1,10 @@
+[submodule "addons/debug_menu"]
+	path = addons/debug_menu
+	url = https://github.com/potbanksoftware/godot-debug-menu
+        branch = no-subdirectory
+[submodule "addons/godot-helpers"]
+	path = addons/godot-helpers
+	url = https://github.com/potbanksoftware/godot-helpers
+[submodule "addons/godot-menus"]
+	path = addons/godot-menus
+	url = https://github.com/potbanksoftware/godot-menus
