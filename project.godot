@@ -19,7 +19,7 @@ config/version="Commit a7f7bac (master)"
 run/main_scene="res://levels/main_menu.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
 boot_splash/fullsize=false
-config/icon="res://art/icon/icon.png"
+config/icon="res://art/icon.png"
 boot_splash/minimum_display_time=3000
 boot_splash/image.editor_hint=""
 

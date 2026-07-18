@@ -9,6 +9,5 @@ extends Node2D
 
 
 func _ready() -> void:
-
 	if music:
 		$"/root/AmbientMusicPlayer".change_track(music, music_random_start)

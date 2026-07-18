@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://b64hsk5dgutcj"
+path="res://.godot/imported/Fantasy Menu Theme.ogg-4f4e5989a915dc67254d0d4f01d024b1.oggvorbisstr"
+
+[deps]
+
+source_file="res://audio/Natural Forest Fantasy Music/Fantasy Menu Theme.ogg"
+dest_files=["res://.godot/imported/Fantasy Menu Theme.ogg-4f4e5989a915dc67254d0d4f01d024b1.oggvorbisstr"]
+
+[params]
+
+loop=true
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4
