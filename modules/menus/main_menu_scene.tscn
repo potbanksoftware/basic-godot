@@ -1,0 +1,47 @@
+[gd_scene load_steps=7 format=3 uid="uid://vqd0ttclg1ya"]
+
+[ext_resource type="PackedScene" uid="uid://bjwrm44aqba7h" path="res://addons/godot-menus/main_menu.tscn" id="1_bo4xc"]
+[ext_resource type="Script" path="res://modules/menus/main_menu.gd" id="2_1stnt"]
+[ext_resource type="Theme" uid="uid://ctr5hyax2hjen" path="res://addons/godot-menus/menu_button_font.tres" id="2_rt6ky"]
+[ext_resource type="Script" path="res://modules/menus/level_select_submenu_button.gd" id="4_b4x83"]
+[ext_resource type="PackedScene" uid="uid://bs48h2dgly2ey" path="res://modules/menus/options_menu.tscn" id="5_odlwj"]
+[ext_resource type="PackedScene" uid="uid://bcjgmhbwssv17" path="res://addons/godot-menus/level_select_menu.tscn" id="6_868ld"]
+
+[node name="CanvasLayer" type="CanvasLayer"]
+
+[node name="MainMenu" parent="." instance=ExtResource("1_bo4xc")]
+script = ExtResource("2_1stnt")
+show_version = true
+
+[node name="Title" parent="MainMenu/VBoxContainer" index="0"]
+text = "[center]Game Name
+[font_size=36]An Animal Adventure
+"
+
+[node name="StartButton" type="Button" parent="MainMenu/VBoxContainer" index="1"]
+unique_name_in_owner = true
+use_parent_material = true
+custom_minimum_size = Vector2(400, 50)
+layout_mode = 2
+theme = ExtResource("2_rt6ky")
+text = "Start"
+
+[node name="LevelSelectButton" parent="MainMenu/VBoxContainer" index="2" node_paths=PackedStringArray("submenu")]
+script = ExtResource("4_b4x83")
+submenu = NodePath("../../../LevelSelectMenu")
+
+[node name="LoadButton" parent="MainMenu/VBoxContainer" index="3"]
+visible = false
+
+[node name="OptionsButton" parent="MainMenu/VBoxContainer" index="4" node_paths=PackedStringArray("submenu")]
+submenu = NodePath("../../../OptionsMenu")
+
+[node name="OptionsMenu" parent="." node_paths=PackedStringArray("parent_button") instance=ExtResource("5_odlwj")]
+parent_button = NodePath("../MainMenu/VBoxContainer/OptionsButton")
+
+[node name="LevelSelectMenu" parent="." node_paths=PackedStringArray("parent_button") instance=ExtResource("6_868ld")]
+parent_button = NodePath("../MainMenu/VBoxContainer/LevelSelectButton")
+
+[connection signal="pressed" from="MainMenu/VBoxContainer/StartButton" to="MainMenu" method="_on_start_button_pressed"]
+
+[editable path="MainMenu"]

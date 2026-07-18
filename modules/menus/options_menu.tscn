@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://bs48h2dgly2ey"]
+
+[ext_resource type="PackedScene" uid="uid://b1pg8555kpwtu" path="res://addons/godot-menus/options_menu.tscn" id="1_2f2ik"]
+
+[node name="OptionsMenu" instance=ExtResource("1_2f2ik")]
+
+[node name="TouchControlsCheckBox" parent="VBoxContainer" index="7"]
+visible = false

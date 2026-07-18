@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=3 uid="uid://dsluska4d2lgc"]
+
+[ext_resource type="Script" path="res://levels/level.gd" id="1_30vo2"]
+[ext_resource type="AudioStream" uid="uid://cvaajfe3wv5qr" path="res://audio/Forest Exploration/forest_exploration_loop.ogg" id="2_6igc6"]
+[ext_resource type="PackedScene" uid="uid://ber34rvfx01rx" path="res://modules/menus/pause_menu.tscn" id="10_0x3wu"]
+
+[node name="Level" type="Node2D"]
+y_sort_enabled = true
+script = ExtResource("1_30vo2")
+music = ExtResource("2_6igc6")
+metadata/_edit_lock_ = true
+
+[node name="PauseCanvas" parent="." instance=ExtResource("10_0x3wu")]
+visible = false

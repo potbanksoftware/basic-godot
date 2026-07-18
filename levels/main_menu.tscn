@@ -1,0 +1,13 @@
+[gd_scene load_steps=5 format=3 uid="uid://b5b77mck5ojpf"]
+
+[ext_resource type="PackedScene" uid="uid://dsluska4d2lgc" path="res://levels/level_template.tscn" id="1_crcrj"]
+[ext_resource type="PackedScene" uid="uid://vqd0ttclg1ya" path="res://modules/menus/main_menu_scene.tscn" id="2_dadlg"]
+[ext_resource type="Script" path="res://levels/main_menu.gd" id="2_dvh88"]
+[ext_resource type="AudioStream" uid="uid://b64hsk5dgutcj" path="res://audio/Natural Forest Fantasy Music/Fantasy Menu Theme.ogg" id="3_fg8qk"]
+
+[node name="Level" instance=ExtResource("1_crcrj")]
+script = ExtResource("2_dvh88")
+music = ExtResource("3_fg8qk")
+music_random_start = false
+
+[node name="CanvasLayer" parent="." index="1" instance=ExtResource("2_dadlg")]
