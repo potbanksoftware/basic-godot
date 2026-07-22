@@ -1,7 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://cp7hxt1h15wim"]
+[gd_scene load_steps=10 format=3 uid="uid://cp7hxt1h15wim"]
 
 [ext_resource type="PackedScene" uid="uid://dsluska4d2lgc" path="res://levels/level_template.tscn" id="1_7sqmw"]
 [ext_resource type="Texture2D" uid="uid://wwby1spi1eqx" path="res://art/icon.svg" id="2_f45bt"]
+[ext_resource type="PackedScene" uid="uid://bp1ycwevll0oo" path="res://addons/godot-helpers/controls/controller_group_prompt_label.tscn" id="3_uqgmc"]
+[ext_resource type="PackedScene" uid="uid://crwk6sd5rygqh" path="res://addons/godot-helpers/controls/controller_prompt_label.tscn" id="4_rt2fa"]
 
 [sub_resource type="GDScript" id="GDScript_bri0o"]
 script/source = "extends CharacterBody2D
@@ -70,3 +72,24 @@ shape = SubResource("WorldBoundaryShape2D_rgt6g")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D" index="2"]
 shape = SubResource("WorldBoundaryShape2D_elumb")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." index="3"]
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer" index="0"]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -40.0
+offset_bottom = 40.0
+grow_horizontal = 0
+
+[node name="ControllerGroupPromptLabel" parent="CanvasLayer/HBoxContainer" index="0" instance=ExtResource("3_uqgmc")]
+layout_mode = 2
+text = " ⇋ Move "
+prompt_text = "Move"
+
+[node name="ControllerPromptLabel" parent="CanvasLayer/HBoxContainer" index="1" instance=ExtResource("4_rt2fa")]
+layout_mode = 2
+text = " ⇓ Jump "
+prompt_text = "Jump"
+action = "jump"
