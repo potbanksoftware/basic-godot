@@ -15,7 +15,7 @@ show_version = true
 
 [node name="Title" parent="MainMenu/VBoxContainer" index="0"]
 text = "[center]Game Name
-[font_size=36]An Animal Adventure
+[font_size=36]Optional Subtitle
 "
 
 [node name="StartButton" type="Button" parent="MainMenu/VBoxContainer" index="1"]
