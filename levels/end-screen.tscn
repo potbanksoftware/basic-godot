@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://dsluska4d2lgc" path="res://levels/level_template.tscn" id="1_kbymp"]
 [ext_resource type="Script" path="res://levels/end_screen.gd" id="2_epb0x"]
-[ext_resource type="Theme" uid="uid://ctr5hyax2hjen" path="res://addons/godot-menus/menu_button_font.tres" id="3_oeolj"]
+[ext_resource type="Theme" uid="uid://cmwdjbdrxopnr" path="res://modules/menus/menu_theme.tres" id="3_otfn6"]
 [ext_resource type="Texture2D" uid="uid://dh6pdgt12r16f" path="res://art/social_logos/36px-Instagram_icon.png" id="4_yk8d1"]
 [ext_resource type="Texture2D" uid="uid://bldau8y2bocvk" path="res://art/social_logos/36px-Threads_(app).png" id="5_35ulo"]
 [ext_resource type="Script" path="res://addons/godot-helpers/bbcode_offset.gd" id="6_76rrq"]
@@ -40,12 +40,12 @@ offset_right = 248.0
 offset_bottom = 293.5
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("3_otfn6")
 
 [node name="Title" type="RichTextLabel" parent="CanvasLayer/VBoxContainer" index="0"]
 clip_contents = false
 custom_minimum_size = Vector2(0, 78)
 layout_mode = 2
-theme = ExtResource("3_oeolj")
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 10
@@ -66,7 +66,6 @@ layout_mode = 2
 clip_contents = false
 custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
-theme = ExtResource("3_oeolj")
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 10
@@ -96,14 +95,13 @@ stretch_mode = 2
 clip_contents = false
 custom_minimum_size = Vector2(0, 40)
 layout_mode = 2
-theme = ExtResource("3_oeolj")
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 10
 theme_override_constants/shadow_outline_size = 10
 theme_override_font_sizes/normal_font_size = 36
 bbcode_enabled = true
-text = "[offset y=-7]@potbanksoftware[/offset]"
+text = "[offset y=2]@potbanksoftware[/offset]"
 fit_content = true
 autowrap_mode = 0
 custom_effects = [SubResource("RichTextEffect_3ilfi")]

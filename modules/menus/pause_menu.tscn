@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://ber34rvfx01rx"]
+[gd_scene load_steps=7 format=3 uid="uid://ber34rvfx01rx"]
 
 [ext_resource type="PackedScene" uid="uid://ccg4oij1cq1n4" path="res://addons/godot-menus/pause_menu.tscn" id="1_q0jgb"]
 [ext_resource type="Script" path="res://modules/menus/level_select_submenu_button.gd" id="2_51lol"]
 [ext_resource type="Script" path="res://modules/menus/pause_menu.gd" id="2_i56l2"]
+[ext_resource type="Theme" uid="uid://cmwdjbdrxopnr" path="res://modules/menus/menu_theme.tres" id="2_wggyf"]
 [ext_resource type="PackedScene" uid="uid://bcjgmhbwssv17" path="res://addons/godot-menus/level_select_menu.tscn" id="3_fmweh"]
 [ext_resource type="PackedScene" uid="uid://bs48h2dgly2ey" path="res://modules/menus/options_menu.tscn" id="4_kc8kh"]
 
@@ -10,21 +11,36 @@
 layer = 50
 
 [node name="PauseMenu" parent="." instance=ExtResource("1_q0jgb")]
+theme = ExtResource("2_wggyf")
 script = ExtResource("2_i56l2")
 main_menu_scene = &"res://levels/main_menu.tscn"
 
+[node name="ResumeButton" parent="PauseMenu/VBoxContainer" index="0"]
+theme = null
+
 [node name="LevelSelectButton" parent="PauseMenu/VBoxContainer" index="1" node_paths=PackedStringArray("submenu")]
+visible = false
+theme = null
 script = ExtResource("2_51lol")
 submenu = NodePath("../../LevelSelectMenu")
 
 [node name="SaveButton" parent="PauseMenu/VBoxContainer" index="2"]
 visible = false
+theme = null
 
 [node name="LoadButton" parent="PauseMenu/VBoxContainer" index="3"]
 visible = false
+theme = null
 
 [node name="OptionsButton" parent="PauseMenu/VBoxContainer" index="4" node_paths=PackedStringArray("submenu")]
+theme = null
 submenu = NodePath("../../OptionsMenu")
+
+[node name="MainMenuButton" parent="PauseMenu/VBoxContainer" index="5"]
+theme = null
+
+[node name="QuitButton" parent="PauseMenu/VBoxContainer" index="6"]
+theme = null
 
 [node name="OptionsMenu" parent="PauseMenu" node_paths=PackedStringArray("parent_button") instance=ExtResource("4_kc8kh")]
 layout_mode = 1
