@@ -6,26 +6,5 @@
 [node name="OptionsMenu" instance=ExtResource("1_2f2ik")]
 theme = ExtResource("2_i55j2")
 
-[node name="Label" parent="VBoxContainer" index="0"]
-theme = null
-
-[node name="MasterVolumeSlider" parent="VBoxContainer" index="1"]
-label_theme = null
-
-[node name="SFXVolumeSlider" parent="VBoxContainer" index="2"]
-label_theme = null
-
-[node name="MusicVolumeSlider" parent="VBoxContainer" index="3"]
-label_theme = null
-
-[node name="DebugMenuButton" parent="VBoxContainer" index="4"]
-theme = null
-
-[node name="VSyncCheckBox" parent="VBoxContainer" index="5"]
-checkbox_theme = null
-
 [node name="TouchControlsCheckBox" parent="VBoxContainer" index="7"]
 visible = false
-
-[node name="BackButton" parent="VBoxContainer" index="9"]
-theme = null

@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://vqd0ttclg1ya"]
+[gd_scene load_steps=8 format=3 uid="uid://vqd0ttclg1ya"]
 
 [ext_resource type="PackedScene" uid="uid://bjwrm44aqba7h" path="res://addons/godot-menus/main_menu.tscn" id="1_bo4xc"]
 [ext_resource type="Script" path="res://modules/menus/main_menu.gd" id="2_1stnt"]
 [ext_resource type="Theme" uid="uid://cmwdjbdrxopnr" path="res://modules/menus/menu_theme.tres" id="2_6owdq"]
+[ext_resource type="Theme" uid="uid://ctr5hyax2hjen" path="res://addons/godot-menus/menu_button_font.tres" id="2_rt6ky"]
 [ext_resource type="Script" path="res://modules/menus/level_select_submenu_button.gd" id="4_b4x83"]
 [ext_resource type="PackedScene" uid="uid://bs48h2dgly2ey" path="res://modules/menus/options_menu.tscn" id="5_odlwj"]
 [ext_resource type="PackedScene" uid="uid://bcjgmhbwssv17" path="res://addons/godot-menus/level_select_menu.tscn" id="6_868ld"]
@@ -15,7 +16,6 @@ script = ExtResource("2_1stnt")
 show_version = true
 
 [node name="Title" parent="MainMenu/VBoxContainer" index="0"]
-theme = null
 theme_override_font_sizes/normal_font_size = 54
 text = "[center]Game Name
 [font_size=36]Optional Subtitle
@@ -30,23 +30,17 @@ text = "Start"
 
 [node name="LevelSelectButton" parent="MainMenu/VBoxContainer" index="2" node_paths=PackedStringArray("submenu")]
 visible = false
-theme = null
 script = ExtResource("4_b4x83")
 submenu = NodePath("../../../LevelSelectMenu")
 
 [node name="LoadButton" parent="MainMenu/VBoxContainer" index="3"]
 visible = false
-theme = null
 
 [node name="OptionsButton" parent="MainMenu/VBoxContainer" index="4" node_paths=PackedStringArray("submenu")]
-theme = null
 submenu = NodePath("../../../OptionsMenu")
 
-[node name="QuitButton" parent="MainMenu/VBoxContainer" index="5"]
-theme = null
-
 [node name="VersionInfo" parent="MainMenu" index="1"]
-theme_override_font_sizes/font_size = 16
+theme = ExtResource("2_rt6ky")
 
 [node name="OptionsMenu" parent="." node_paths=PackedStringArray("parent_button") instance=ExtResource("5_odlwj")]
 visible = false
